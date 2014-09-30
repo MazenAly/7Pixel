@@ -57,7 +57,7 @@ class SalesTaxes
    unless exempt
 	taxes += price.to_f * BASIC_TAXES
    end 
-    return (taxes * 20).round / 20.0    #rounding to the nearest 0.05
+    return (taxes * 20).ceil / 20.0    #rounding up to the nearest 0.05
   end
   
 end
